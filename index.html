@@ -192,9 +192,74 @@
         <li style="margin-bottom: 10px;">Variabilidad en Tamaño: Se menciona la diversidad de tamaños que pueden tener los agujeros negros, desde pequeños hasta supermasivos, subrayando su heterogeneidad en el universo.</li>
         <li style="margin-bottom: 10px;">Conexiones entre Gravedad, Teoría Cuántica y Relatividad General: Se resalta la importancia de los agujeros negros en la investigación científica al revelar conexiones fascinantes entre la gravedad, la teoría cuántica y la relatividad general de Einstein.</li>
     </ol>
-    <hr style="color: black;">
-    
-     
+    <hr>
+    <h2 style="color: blue;font-size: 30xp;text-align: center;">llena los campos</h2>
+<hr>
+    <table border="1" cellpadding="10" align="center">
+        <caption><h2>Formulario de Datos</h2></caption>
+            <tr>
+                <td>Informacion:</td>
+                <td>
+                    <textarea style="width: 300px; height: 100px; box-sizing: border-box; text-align: justify;" readonly>Al proporcionar tus datos, recibirás información adicional por correo sobre agujeros negros, exoplanetas y energía oscura en el cosmos.
+                    </textarea>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="nombre">Nombre:</label></td>
+                <td><input type="text" id="nombre" name="nombre" required></td>
+            </tr>
+            <tr>
+                <td><label for="edad">Edad:</label></td>
+                <td><input type="number" id="edad" name="edad" required></td>
+            </tr>
+            <tr>
+                <td><label for="email">Correo electrónico:</label></td>
+                <td><input type="email" id="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td><label>Sexo:</label></td>
+                <td>
+                    <input type="radio" id="masculino" name="sexo" value="masculino">
+                    <label for="masculino">Masculino</label>
+                    <input type="radio" id="femenino" name="sexo" value="femenino">
+                    <label for="femenino">Femenino</label>
+                </td>
+            </tr>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <button type="button" onclick="mostrarAlertaYLimpiar()">Aceptar</button>
+                <button type="reset" onclick="limpiarFormulario()">Reiniciar</button>
+            </td>
+        </tr>
+    </table>
+    <script>
+        function mostrarAlertaYLimpiar() {
+            if (validarCampos()) {
+                alert('Datos registrados correctamente.');
+                limpiarFormulario();
+            } else {
+                alert('Completa todos los campos antes de continuar.');
+            }
+        }
+
+        function validarCampos() {
+            // Verifica si los campos obligatorios están completos
+            var nombre = document.getElementById('nombre').value;
+            var email = document.getElementById('email').value;
+            var edad = document.getElementById('edad').value;
+
+            return nombre !== '' && email !== '' && edad !== '';
+        }
+
+        function limpiarFormulario() {
+            document.getElementById('nombre').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('edad').value = '';
+            // Puedes agregar más campos según sea necesario
+        }
+    </script>
+ 
 </div>
 </body>
 </html>
